@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Reddit Mono", monospace;
+    font-optical-sizing: auto;
+  
+}
+.container{
+    overflow: hidden;
+}
+.nav-item:hover{
+    background-color: antiquewhite;
+    transition: all 0.3s ease-in;
+
+}
+ .active{
+    background-color: cornsilk;
+ 
+    
+}
+.hello{
+
+    font-size: 10rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    background: linear-gradient(90deg, rgba(0,173,41,1) 0%, rgba(89,238,29,1) 18%, rgba(88,238,32,1) 33%, rgba(50,227,127,1) 48%, rgba(0,212,255,1) 100%);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.header{
+    position: relative;
+
+}
+.background-grey{
+    position: absolute;
+    z-index: -1;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: grey;
+    height: 400px;
+}
+.animation{
+    position: relative;
+    height: 400px;
+    margin:0 auto;
+
+   
+}
+.naruto {
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    position: absolute; /* Ensure the element is positioned absolutely for animation */
+    animation: animate 2s ease-in 5;
+   
+   
+}
+.naruto2{
+    position: absolute;
+    bottom: 0;
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    animation: animate2 2s ease-in 5;
+}
+
+@keyframes animate {
+    0% {
+        top: 0;
+        left: 0;
+    }
+  
+    100% {
+        top:50%;
+        left: 50%;
+    }
+}
+@keyframes animate2 {
+    0% {
+        top:50%;
+        left: 50%;
+    }
+  
+    100% {
+        top:0;
+        left: 0;
+    }
+}
+@media (max-width: 768px) {
+    .background-grey{
+        height: 350px;
+    }
+    .animation{
+        height:300px;
+        width: 90vw;
+        margin-block: auto;
+    }
+
+    
+    .naruto{
+        height: 150px;
+        width: 200px;
+    }
+    .naruto2{
+        height: 150px;
+        width: 200px;
+    }
+    @keyframes animate {
+        0% {
+            top: 0;
+            left: 0;
+        }
+      
+        100% {
+            top:50%;
+            left: 60%;
+        }
+    }
+    @keyframes animate2 {
+        0% {
+            top:50%;
+            left: 60%;
+        }
+      
+        100% {
+            top:0;
+            left: 0;
+        }
+    }
+    
+}
+@media (max-width:600px){
+    @keyframes animate {
+        0% {
+            top: 0;
+            left: 0;
+        }
+      
+        100% {
+            top:40%;
+            left: 40%;
+        }
+    }
+    @keyframes animate2 {
+        0% {
+            top:40%;
+            left: 40%;
+        }
+      
+        100% {
+            top:0;
+            left: 0;
+        }
+    }
+
+}
+.b{
+    background-color: blueviolet;
+}
+.boxes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    background: url('s.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    color: transparent;
+
+    
+
+    
+
+}
+.boxes:nth-child(odd){
+    
+    background-color: green;
+    height: 200px;
+   
+}
+.boxes:nth-child(even){
+    
+    background-color: blue;
+    height: 200px;
+   
+}
+.animation-shoe{
+    position: relative;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.shoe h1{
+    font-size: 10rem;
+    color: black;
+   
+
+
+}
+.shoe{
+    position: relative;
+}
+.shoe h1::before {
+    content: "SALMO";
+    position: absolute;
+    z-index: 2;
+    font-size: 10rem;
+    top: 0px;
+    text-align: center;
+    -webkit-text-stroke: 3px black;
+    color: transparent;
+}
+ img{
+    position: absolute;
+    top: 50px;
+    right: -100%;
+    animation: shoe 4s ease-in-out 2;
+ mix-blend-mode: multiply;
+ transform-origin: center;
+
+    
+   
+}
+@keyframes shoe{
+    0%{
+        right: -80%;
+    }
+    50%{
+        right:55%;
+        transform: rotateZ(-40deg);
+        
+    }
+    100%{
+        right: -80%;
+    }
+}
