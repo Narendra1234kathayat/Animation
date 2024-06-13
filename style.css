@@ -229,7 +229,7 @@
     top: 50px;
     right: -100%;
     animation: shoe 4s ease-in-out 2;
- mix-blend-mode: multiply;
+ /* mix-blend-mode: multiply; */
  transform-origin: center;
 
     
